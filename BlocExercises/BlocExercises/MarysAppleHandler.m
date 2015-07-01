@@ -14,7 +14,7 @@
     NSString *itemToReturn;
 
     /* WORK HERE */
-    if (dollars == 4) {
+    if (dollars <= 4) {
         return itemToReturn = @"get out of my store";
     } else if (dollars == 5) {
         return itemToReturn = @"have some gum";
@@ -22,7 +22,7 @@
         return itemToReturn = @"have an apple";
     } else if (dollars == 1000) {
         return itemToReturn = @"have an Apple computer";
-    } else if (dollars == 1000000000) {
+    } if (dollars >= 1000000000) {
         return itemToReturn = @"have The Big Apple";
     }
     
