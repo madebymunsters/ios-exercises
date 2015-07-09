@@ -12,17 +12,30 @@
 
 - (NSString *)favoriteDrinkForStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     /* WORK HERE */
-    return @"";
+    return characterDictionary[@"favorite drink"];
 }
 
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
     /* WORK HERE */
-    return @[];
+    NSMutableArray *favDrinks = [NSMutableArray array];
+    
+    for (NSDictionary *charactersDictionary in charactersArray){
+        [favDrinks addObject:charactersDictionary[@"favorite drink"]];
+    }
+    
+    return favDrinks;
 }
 
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     /* WORK HERE */
-    return @{};
+    //add enstry to dictionary @"quote": @"Hi"
+    //return new dictionary
+    
+    NSMutableDictionary *newDictionary = [characterDictionary mutableCopy];
+    newDictionary[@"quote"] = @"Don't half ass two things. Whole ass one thing";
+    
+    return newDictionary;
+    
 }
 
 @end
